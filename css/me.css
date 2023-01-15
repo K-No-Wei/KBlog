@@ -1,0 +1,250 @@
+/* -------------padded------------- */
+.m-padded-tb-mini{
+    padding-top: 0.1em !important;
+    padding-bottom: 0.1em !important;
+}
+
+.m-padded-tb-tiny{
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+
+.m-padded-tb{
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.m-padded-tb-bg{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+.m-padded-lr{
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+}
+
+.m-padded-lr-mini{
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+}
+
+.m-padded-lr-em{
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+
+.m-padded-zero{
+    padding: 0em !important;
+}
+
+.m-padded-tiny{
+    padding: 1em !important;
+}
+
+/* -----------color---------- */
+.m-black{
+    color: #575656 !important;
+}
+
+
+/* -----------margin------------------ */
+
+.m-margin-tb{
+    /* margin-top: 0.5em !important; */
+    margin-bottom: 2em !important;
+}
+
+.m-margin-tb-normal{
+    margin-top: 3em !important;
+    margin-bottom: 2em !important;
+}
+
+/* ---------------text-------------- */
+.m-text-thin{
+    font-weight: 300 !important;
+}
+
+.m-text-bg{
+    font-weight: 700 !important;
+}
+
+.m-text-spaced{
+    letter-spacing: 1px !important;
+}
+
+.m-text{
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8;
+}
+
+/* ------------opacity-------------- */
+.m-opacity-tiny{
+    opacity: 0.7 !important;
+}
+
+/* --------------container------------- */
+.m-container{
+    max-width: 90em !important;
+    margin: auto !important;
+}
+
+.m-container-grid{
+    grid-template-columns: 20fr 15fr !important;
+    display: grid !important;
+}
+
+/* -----------------article------------- */
+.m-article{
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 1px 1px 8px #ddd !important;
+    transition: all 0.8s ease !important;
+}
+
+.m-article:hover{
+    box-shadow: 0px 0px 14px #b8b8b8 !important;
+}
+
+.m-article-image{
+    width: 100% !important;
+    height: 300px !important;
+    overflow: hidden !important;
+}
+
+.m-article-image img{
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: all .8s ease!important;
+}
+
+.m-article-image img:hover{
+    transform: scale(1.3) rotate(10deg);
+}
+
+.m-article-item .item{
+    padding: 0.5em !important;
+}
+
+/* ----------card------------ */
+.m-card-info{
+    width: 100% !important;
+    box-shadow: 1px 1px 8px #ddd !important;
+}
+
+.m-card-info .m-myimg{
+    width: 120px !important;
+    border-radius: 100% !important;
+    transition: all 0.8s ease !important;
+}
+
+.m-card-info .m-myimg:hover{
+    transform: rotate(360deg) !important;
+}
+
+/*------------clear-------------*/
+.clearfix:after{
+    content: '';
+    display: block;
+    width: 0px;
+    height: 50px;
+    clear: left;
+}
+
+/* ----------header------------- */
+
+.m-header-grid{
+    padding: 1em 6em 1em 6em !important;
+    display: grid !important;
+    grid-template-columns: 1fr 3fr !important;
+}
+
+.m-header-all{
+    display: grid !important;
+    align-items: center !important; 
+    grid-template-columns: 2fr 10fr 3fr !important;
+}
+
+.m-header-tou{
+    max-width: 700px !important;
+    display: grid;
+    grid-template-columns: repeat(5, 14%);
+}
+
+.m-header-button-adaptation{
+    display: none !important;
+}
+
+.sidebarClass{
+    background-color: rgba(45, 40, 40, 0.75);
+    position: fixed;
+    top: 0;
+    left: -50%;    /* 侧边栏有多宽，就-多少，相当于先藏在视窗外边（从左边打开的话就换成left） */
+    width: 50%;
+    height: calc(100vh);    /* 减去底部导航栏的高度 */
+    z-index: 9999;    /* 设置一个超大的数字覆盖所有元素，如果层叠不够或者未设置，那么侧边栏可能会被其他元素遮挡 */
+    transition: ease-in-out 1s;
+}
+
+.addWith{
+    left: 0;
+    width: 80%;
+}
+
+/*----------grid----------*/
+.m-my-grid{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 990px){
+    .m-article-image{
+        /* width: 100% !important; */
+        height: 330px !important;
+        overflow: hidden !important;
+    }
+}
+
+@media screen and (max-width: 890px){
+
+    .m-header-button-adaptation{
+        display: block !important;
+    }
+
+    .m-header-all{
+        display: grid !important;
+        align-items: center !important; 
+        grid-template-columns: 1fr !important;
+    }
+
+    .m-header-tou{
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(5, 50px) !important;
+    }
+
+    .m-mobile-header{
+        display: none !important;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .m-my-app-res{
+        max-width: 94% !important; 
+        margin-left: 2% !important;
+        background-color: aqua;
+    }
+
+    .m-container-grid{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 14fr 10fr !important;
+    }
+}
