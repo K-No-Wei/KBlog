@@ -20,8 +20,13 @@
 }
 
 .m-padded-lr{
-    padding-left: 8% !important;
-    padding-right: 8% !important;
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+
+.m-padded-lr-min{
+    padding-left: 1em !important;
+    padding-right: 1em !important;
 }
 
 .m-padded-lr-mini{
@@ -42,6 +47,10 @@
     padding: 1em !important;
 }
 
+.m-padded-normal{
+    padding: 2.5em !important;
+}
+
 /* -----------color---------- */
 .m-black{
     color: #575656 !important;
@@ -58,6 +67,15 @@
 .m-margin-tb-normal{
     margin-top: 3em !important;
     margin-bottom: 2em !important;
+}
+
+/* -------------comment------------- */
+
+.m-blog-comment-end{
+    margin-top: 10px; 
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-column-gap: 5px;
 }
 
 /* ---------------text-------------- */
@@ -184,7 +202,7 @@
     left: -50%;    /* 侧边栏有多宽，就-多少，相当于先藏在视窗外边（从左边打开的话就换成left） */
     width: 50%;
     height: calc(100vh);    /* 减去底部导航栏的高度 */
-    z-index: 9999;    /* 设置一个超大的数字覆盖所有元素，如果层叠不够或者未设置，那么侧边栏可能会被其他元素遮挡 */
+    z-index: 10001;    /* 设置一个超大的数字覆盖所有元素，如果层叠不够或者未设置，那么侧边栏可能会被其他元素遮挡 */
     transition: ease-in-out 1s;
 }
 
@@ -214,6 +232,14 @@
 
     .m-header-button-adaptation{
         display: block !important;
+    }
+
+    .m-blog-comment-end{
+        margin-top: 10px; 
+        display: grid;
+        grid-template-columns:1fr;
+        grid-auto-rows: auto;
+        grid-row-gap: 5px;
     }
 
     .m-header-all{
@@ -246,5 +272,9 @@
         display: grid !important;
         grid-template-columns: 1fr !important;
         grid-template-rows: 14fr 10fr !important;
+    }
+
+    .m-padded-lr{
+        padding: 0em !important;
     }
 }

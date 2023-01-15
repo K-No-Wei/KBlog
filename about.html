@@ -5,18 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KBlog</title>
+  <title>关于我</title>
   <link href="/css/reset.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="./js/Semantic/semantic.min.css">
   <link rel="stylesheet" href="./css/me.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/scroll.css">
   <script src="./js/jquery-v3.6.3.js"></script>
   <script src="./js/Semantic/semantic.min.js"></script>
+  <script src="./js/utils/top-scroll.js"></script>
   <style>
-
+    
   </style>
 </head>
 
 <body>
+  <progress id="content_progress" value="0"></progress>
   <div id="container" >
     <!-- header -->
     <div class="clearfix">
@@ -85,116 +89,67 @@
     <!-- content -->
     <div class="m-container m-padded-tb-bg">
       <div class="ui container">
-        <div class="ui stackable grid">
-          <!-- 左边文章列表 -->
-          <div class="eleven wide column">
-            <!-- content -->
-            <div class="ui container" >
-              <div class="ui container m-article m-container-grid m-margin-tb" style="background-color: white;">
-                <div class="m-article-image">
-                  <a href="/article.html" target="_blank">
-                    <img src="./img/head.png" alt="">
-                  </a>
-                </div>
-                <div class=" m-padded-zero m-padded-tiny m-article-item">
-                  <div class="ui list">
-                    <div class="item">
-                      <i class="calendar icon"></i>2022-10-10
-                    </div>
-                    <div class="item">
-                      <h2>你好世界</h2>
-                    </div>
-                    <div class="item">
-                      <i class="comment icon"></i> 12评论
-                    </div>
-                    <div class="item">
-                      <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="ui header center aligned" style="font-size: 4em;">
+          关于
+        </div>
 
-              <div class="ui container m-article m-container-grid m-margin-tb" style="background-color: white;">
-                <div class="m-article-image">
-                  <a href="#" target="_blank">
-                    <img src="./img/head.png" alt="">
-                  </a>
-                </div>
-                <div class="column m-padded-zero m-padded-tiny m-article-item">
-                  <div class="ui list">
-                    <div class="item">
-                      <i class="calendar icon"></i>2022-10-10
-                    </div>
-                    <div class="item">
-                      <h2>你好世界</h2>
-                    </div>
-                    <div class="item">
-                      <i class="comment icon"></i> 12评论
-                    </div>
-                    <div class="item">
-                      <p class="m-text">正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+        <div class="ui segment m-about-card">
+          <div class="m-about-image">
+            <img src="./img/footer-link.jpg" alt="">
           </div>
-          <!-- 右侧人物侧边栏 -->
-          <div class="five wide column m-padded-lr-em"
-            style="padding-left: 2em !important;padding-right: 2em !important;">
-            <!-- 介绍页 -->
-            <div class="ui card m-card-info">
-              <div class="content center aligned ">
-                <div class="ui rounded image ">
-                  <img class="m-myimg" src="./img/footer-link.jpg" alt="">
-                </div>
-                <h3>Knowei</h3>
-                <p>Like Me</p>
-                <div class="ui segment basic">
-                  <a href="#" class="ui icon circular button"><i class="github icon"></i></a>
-                  <a href="#" class="ui wechat icon circular button"><i class="weixin icon"></i></a>
-                  <a href="#" class="ui qq icon circular button" data-content="2994172661"><i class="qq icon"></i></a>
-                </div>
+          <div class="m-about-card-header m-padded-normal">
+            <div class="ui horizontal list item" style="text-align: center;">
+              <div class="item" style="padding-left: 10px;">
+                <div><a href="" style="font-size: 20px;font-weight: 1000;">12</a></div>
+                <div>文章</div>
+              </div>
+              <div class="item" style="padding-left: 10px;">
+                <div><a href="" style="font-size: 20px;font-weight: 1000;">12</a></div>
+                <div>分类</div>
+              </div>
+              <div class="item" style="padding-left: 10px;">
+                <div><a href="" style="font-size: 20px;font-weight: 1000;">12</a></div>
+                <div>标签</div>
+              </div>
+            </div>
+            <div class="m-about-header-center item">
+              <h2>knowei</h2>
+              <p>一个大三狗</p>
+            </div>
+            <div class="ui horizontal list m-about-card-right item" style="text-align: center;">
+              <div class="item">
+                <a href="#" class="ui tishi icon green circular button" data-content="访问GitHub地址"><i class="github icon"></i></a>
+              </div>
+              <div class="item">
+                <a href="#" class="ui tishi icon green circular button" data-content="QQ:2994172661"><i class="qq icon"></i></a>
+              </div>
+              <div class="item">
+                <a href="#" class="ui tishi icon green circular button" data-content="访问哔哩哔哩主页"><i class="youtube square icon"></i></a>
+              </div>
+            </div>
+          </div>
 
+          <div>
+            <h2 style="text-align: center;">技能</h2>
+            <div style="padding: 0 6em 0 6em !important;">
+              <div class="ui green progress active" style="border-radius: 50px;">
+                <div class="label">html</div>
+                <div class="bar" style="width: 21%;border-radius: 50px;">
+                  <div class="progress">21%</div>
+                </div>
               </div>
-            </div>
-            <!-- 推荐 -->
-            <div class="ui segments">
-              <div class="ui orange segment">
-                <i class="book icon"></i> 最新推荐
-              </div>
-              <div class="ui segment">
-                <a href="#">用户故事</a>
-              </div>
-              <div class="ui segment">
-                <a href="#">用户故事</a>
-              </div>
-              <div class="ui segment">
-                <a href="#">用户故事</a>
-              </div>
-            </div>
-            <!-- 最新文章 -->
-            <div class="ui segments">
-              <div class="ui teal segment">
-                <i class="book icon"></i> 最新文章
-              </div>
-              <div class="ui segment">
-                <a href="#">用户故事</a>
-              </div>
-              <div class="ui segment">
-                <a href="#">用户故事</a>
-              </div>
-              <div class="ui segment">
-                <a href="#">用户故事</a>
-              </div>
-            </div>
 
-            <!--二维码-->
-            <h4 class="ui horizontal divider header m-margin-top-large">扫码关注我</h4>
-            <div class="ui centered card" style="width: 11em">
-              <img src="./img/footer-link.jpg" alt="" class="ui rounded image">
+              <div class="ui red progress active" style="border-radius: 50px;">
+                <div class="label">java</div>
+                <div class="bar" style="width: 50%;border-radius: 50px;">
+                  <div class="progress">50%</div>
+                </div>
+              </div>
             </div>
+          </div>
+          
+          <div class="ui image rounded basic segment">
+            <img src="./img/head.png" alt="">
           </div>
         </div>
       </div>
@@ -231,8 +186,12 @@
     </footer>
 
   </div>
+  
   <script type="text/javascript">
-    $('.qq').popup()
+
+    $('.tishi').popup({
+      position: 'top center'
+    })
 
     $('.ui .dropdown').dropdown({
       on: 'hover'
