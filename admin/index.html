@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" href="../js/Semantic/semantic.min.css">
+	<link rel="stylesheet" href="../css/admin.css">
+	<script src="../js/jquery-v3.6.3.js"></script>
+	<script src="../js/Semantic/semantic.min.js"></script>
+</head>
+<body>
+    <div class="container">
+		<!-- 侧边栏 -->
+        <nav class="menu-warp">
+            <div class="m-menu">
+                <ul>
+					<li>
+						<!-- <span style="font-size: 20px;letter-spacing: 2px; display: block;text-align: center;">欢迎来到管理界面</span> -->
+					</li>
+                    <li>
+                        <a href="#">
+                            <i class="home icon"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="file alternate icon"></i>
+                            <span>文章管理</span>
+                        </a>
+                    </li>
+					<li>
+                        <a href="#">
+                            <i class="edit icon"></i>
+                            <span>发布文章</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+		
+		<div class="">
+			<!-- 头部 -->
+			<div class="menu-header" style="padding-left: 30px;">
+				<div class="menu-button" style="display: grid;align-items: center;cursor: pointer;">
+					<i class="list icon"></i>
+				</div>
+				<div>
+					<div class="ui dropdown ">
+						<img src="../img/footer-link.jpg" alt="" height="50px" style="border-radius: 50%;">
+						<div class="menu">
+							<div class="item">注销</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="m-content">
+				123
+			</div>
+		</div>
+    </div>
+	
+
+	<script type="text/javascript">
+		$('.menu-button').click(function(){
+			var menu = $('.menu-warp')
+			if(menu.hasClass('menu-btn-sidebar')){
+				$('.menu-warp').removeClass('menu-btn-sidebar')
+				$('.menu-header').removeClass('menu-btn-header')
+				$('.m-content').removeClass('m-btn-content')
+			}
+			else{
+				$('.menu-warp').addClass('menu-btn-sidebar')
+				$('.menu-header').addClass('menu-btn-header')
+				$('.m-content').addClass('m-btn-content')
+			}
+		})
+
+		$('.menu-btn-image').click(function(){
+			var menu_c = $('.menu-header-caidan')
+			if(menu_c.hasClass('menu-btn-header-caidan'))
+				menu_c.removeClass('menu-btn-header-caidan')
+			else
+				menu_c.addClass('menu-btn-header-caidan')
+		})
+		$('.ui.dropdown').dropdown({
+			on : 'hover'
+		});
+	</script>
+</body>
+</html>
